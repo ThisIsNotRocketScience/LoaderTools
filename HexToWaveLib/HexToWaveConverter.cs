@@ -126,6 +126,25 @@ namespace HexToWaveLib
 
         }
 
+        public static void WriteEepromCommand(string outfile, UInt32 address, byte value)
+        {
+            List<short> EepromData = new List<short>();
+            WriteEeprom(EepromData, address, value);
+            WaveGenerator W3 = new WaveGenerator(EepromData);
+            W3.Save(outfile);
+        }
+
+        private static void WriteEeprom(List<short> D, uint address, byte value)
+        {
+            WriteLeadIn(D);
+            Write4Byte(D, (byte)'E', (byte)'E', (byte)'P', (byte)'R');
+            WriteInt(D, (address << 16) + value);
+            WriteInt(D, (uint)(((uint)value << 16) + address));
+            WriteLeadOut(D, true);
+
+           
+        }
+
         public static void WriteRebootWav(string outputfilename)
         {
             List<short> RebootData = new List<short>();
@@ -228,6 +247,34 @@ namespace HexToWaveLib
 
                 writer.Close();
                 fileStream.Close();
+            }
+
+            internal void Save(MemoryStream outstream)
+            {
+                outstream.Seek(0, SeekOrigin.Begin);
+                StreamWriter writer = new StreamWriter(outstream);
+                writer.Write(header.sGroupID.ToCharArray());
+                writer.Write(header.dwFileLength);
+                writer.Write(header.sRiffType.ToCharArray());
+                writer.Write(format.sChunkID.ToCharArray());
+                writer.Write(format.dwChunkSize);
+                writer.Write(format.wFormatTag);
+                writer.Write(format.wChannels);
+                writer.Write(format.dwSamplesPerSec);
+                writer.Write(format.dwAvgBytesPerSec);
+                writer.Write(format.wBlockAlign);
+                writer.Write(format.wBitsPerSample);
+
+                writer.Write(data.sChunkID.ToCharArray());
+                writer.Write(data.dwChunkSize);
+                foreach (short dataPoint in data.shortArray)
+                {
+                    writer.Write(dataPoint);
+                }
+
+                outstream.Seek(4, SeekOrigin.Begin);
+                uint filesize = (uint)outstream.Length;
+                writer.Write(filesize - 8);
             }
         }
 
