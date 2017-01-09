@@ -107,7 +107,7 @@
             this.label4.Text = "Address";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Form1
+            // EEPoke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,7 +120,9 @@
             this.Controls.Add(this.ValueLabel);
             this.Controls.Add(this.AddressBox);
             this.Controls.Add(this.AddressLabel);
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "EEPoke";
             this.Text = "TINRS EEPoke";
             this.ResumeLayout(false);
             this.PerformLayout();
