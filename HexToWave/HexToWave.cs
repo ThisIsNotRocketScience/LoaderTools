@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.IO;
 using IHex;
 
-namespace AudioFirmwareWriter
+namespace HexToWave
 {
-    class AudioFirmwareWriter
+    class HexToWave
     {
         
         
