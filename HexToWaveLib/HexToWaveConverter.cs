@@ -126,6 +126,23 @@ namespace HexToWaveLib
 
         }
 
+        public static void WriteDACCommand(string outfile, uint value1, uint value2)
+        {
+            List<short> DACData = new List<short>();
+            WriteDAC(DACData, value1, value2);
+            WaveGenerator W3 = new WaveGenerator(DACData);
+            W3.Save(outfile);
+        }
+
+        private static void WriteDAC(List<short> D, uint value1, uint value2)
+        {
+            WriteLeadIn(D);
+            Write4Byte(D, (byte)'D', (byte)'A', (byte)'C', (byte)'S');
+            WriteInt(D, (value1 << 16) + value2);
+            WriteInt(D, (uint)(((uint)value2 << 16) + value1));
+            WriteLeadOut(D, true);
+        }
+
         public static void WriteEepromCommand(string outfile, UInt32 address, byte value)
         {
             List<short> EepromData = new List<short>();
