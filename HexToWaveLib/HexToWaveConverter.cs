@@ -33,6 +33,8 @@ namespace HexToWaveLib
             int BootLoaderOffset = 0;
 
             BootLoaderOffset = FindOffset(allbytes);
+            Console.WriteLine("Bootloader sits 0x{0:X} from start", BootLoaderOffset);
+
             int count = Math.Max(0, allbytes.Count - BootLoaderOffset);
             List<byte> bytes = new List<byte>();
 
@@ -53,9 +55,24 @@ namespace HexToWaveLib
             List<byte> thebytes = new List<byte>();
             int blockchunk = 0;
 
+            uint BlocksToWrite = (uint)Math.Ceiling(bytes.Count() / 1024.0f);
+            Console.WriteLine("Writing {0} chunks of 1024 bytes each", BlocksToWrite);
+            for(uint i =0;i< 4000;i+=100)
+            {
+                WriteDAC(Data2, i, 4000-i);
+            }
+            WriteLeadIn(Data2);
+            Write4Byte(Data2, (byte)'K', (byte)'I', (byte)'L', (byte)'L');
+            WriteInt(Data2, 1337);// 1337
+            WriteLeadOut(Data2, true);
+            WriteSecond(Data2);
+            WriteSecond(Data2);
+            WriteSecond(Data2);
+            WriteSecond(Data2);
+
             WriteLeadIn(Data2);
             Write4Byte(Data2, (byte)'D', (byte)'O', (byte)'I', (byte)'T');
-            WriteInt(Data2, (uint)Math.Ceiling(bytes.Count() / 1024.0f));// blocks
+            WriteInt(Data2, BlocksToWrite);// blocks
             WriteLeadOut(Data2, true);
             WriteSecond(Data2);
             
@@ -503,7 +520,7 @@ namespace HexToWaveLib
             writecount = 0;
 
         }
-        public static bool Verbose = false;
+        public static bool Verbose = true;
         private static void WriteEmptyLongPulse(List<short> data)
         {
             for (int i = 0; i < LONGPULSE; i++) data.Add(0);
