@@ -47,7 +47,7 @@ namespace HexToWaveLib
             if (bcount > 0)
             {
                 for (int i = 0; i < 1024 - bcount; i++) bytes.Add(0);
-            }          
+            }
 
             List<short> Data2 = new List<short>();
             byte idx = 0;
@@ -57,9 +57,9 @@ namespace HexToWaveLib
 
             uint BlocksToWrite = (uint)Math.Ceiling(bytes.Count() / 1024.0f);
             Console.WriteLine("Writing {0} chunks of 1024 bytes each", BlocksToWrite);
-            for(uint i =0;i< 4000;i+=100)
+            for (uint i = 0; i < 4000; i += 100)
             {
-                WriteDAC(Data2, i, 4000-i);
+                WriteDAC(Data2, i, 4000 - i);
             }
             WriteLeadIn(Data2);
             Write4Byte(Data2, (byte)'K', (byte)'I', (byte)'L', (byte)'L');
@@ -75,7 +75,7 @@ namespace HexToWaveLib
             WriteInt(Data2, BlocksToWrite);// blocks
             WriteLeadOut(Data2, true);
             WriteSecond(Data2);
-            
+
             while ((bytes.Count() / 1024) * 1024 < bytes.Count()) bytes.Add(0);
 
             for (int i = 0; i < bytes.Count(); i += MAXCHUNK)
@@ -151,6 +151,29 @@ namespace HexToWaveLib
             W3.Save(outfile);
         }
 
+        public static void WriteDACCommandFile(string outfile)
+        {
+            List<short> DACData = new List<short>();
+            WriteSecond(DACData);
+            WriteLeadIn(DACData);
+            for (int j = 0; j < 10; j++)
+            {
+                for (uint i = 0; i < 2048; i+=30)
+                {
+                    WriteDAC(DACData, 2047 - i, i);
+                }
+                for (uint i = 0; i < 2048; i+=30)
+                {
+                    WriteDAC(DACData, i, 2047 - i);
+                }
+            
+            }
+            WriteLeadOut(DACData);
+            WriteSecond(DACData);
+            WaveGenerator W3 = new WaveGenerator(DACData);
+            W3.Save(outfile);
+        }
+
         private static void WriteDAC(List<short> D, uint value1, uint value2)
         {
             WriteLeadIn(D);
@@ -176,7 +199,7 @@ namespace HexToWaveLib
             WriteInt(D, (uint)(((uint)value << 16) + address));
             WriteLeadOut(D, true);
 
-           
+
         }
 
         public static void WriteRebootWav(string outputfilename)

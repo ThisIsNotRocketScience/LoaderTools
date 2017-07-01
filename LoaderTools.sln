@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26020.0
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AudioDecoderTester", "AudioDecoderTester\Reader.vcxproj", "{2A105CD3-ABAC-43A9-99A2-34E93519A7DA}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EEPoke", "EEPoke\EEPoke.csproj", "{EAC7B9BD-8518-4D6F-9454-8AD96DF69637}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DACWriter", "DACWriter\DACWriter.csproj", "{52D1D4DC-0E92-49DD-80B4-79E6EEA4C61E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DacTestFileWriter", "DacTestFileWriter\DacTestFileWriter.csproj", "{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +133,18 @@ Global
 		{52D1D4DC-0E92-49DD-80B4-79E6EEA4C61E}.Release|x64.Build.0 = Release|Any CPU
 		{52D1D4DC-0E92-49DD-80B4-79E6EEA4C61E}.Release|x86.ActiveCfg = Release|Any CPU
 		{52D1D4DC-0E92-49DD-80B4-79E6EEA4C61E}.Release|x86.Build.0 = Release|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Debug|x64.Build.0 = Debug|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Debug|x86.Build.0 = Debug|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Release|x64.ActiveCfg = Release|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Release|x64.Build.0 = Release|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Release|x86.ActiveCfg = Release|Any CPU
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,5 +158,6 @@ Global
 		{F5B25415-5625-4AF4-BCDF-5D05ADF2507C} = {EA7B7DA3-55D0-464B-8E59-DD26CA80AC15}
 		{EAC7B9BD-8518-4D6F-9454-8AD96DF69637} = {EA7B7DA3-55D0-464B-8E59-DD26CA80AC15}
 		{52D1D4DC-0E92-49DD-80B4-79E6EEA4C61E} = {EA7B7DA3-55D0-464B-8E59-DD26CA80AC15}
+		{FB269FC8-96BF-4AC2-9881-CDF7DE9524E2} = {86978AF3-6DC8-4C4C-9E92-63F0435502CC}
 	EndGlobalSection
 EndGlobal

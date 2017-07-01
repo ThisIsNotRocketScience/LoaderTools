@@ -20,7 +20,7 @@ namespace HexFileMerger
 
             IHex.IHex.Merge(args[0], args[1], args[2]);
 
-            Console.ReadKey();
+         //   Console.ReadKey();
         }
     }
 }
