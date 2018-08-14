@@ -156,7 +156,7 @@ namespace WobblerCalibrator
             for (int i = 0; i < B.Length; i++)
             {
                 WriteEepromByte((ushort)(i + 1), B[i]);
-                System.Threading.Thread.Sleep(200);
+                System.Threading.Thread.Sleep(500);
             }
             for (int i = 0; i < B.Length; i++)
             {

@@ -45,9 +45,10 @@
             // 
             // UpNormal
             // 
-            this.UpNormal.Location = new System.Drawing.Point(12, 75);
+            this.UpNormal.Location = new System.Drawing.Point(33, 206);
+            this.UpNormal.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.UpNormal.Name = "UpNormal";
-            this.UpNormal.Size = new System.Drawing.Size(75, 47);
+            this.UpNormal.Size = new System.Drawing.Size(205, 129);
             this.UpNormal.TabIndex = 0;
             this.UpNormal.Text = "Up";
             this.UpNormal.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@
             // 
             // NormalDown
             // 
-            this.NormalDown.Location = new System.Drawing.Point(12, 156);
+            this.NormalDown.Location = new System.Drawing.Point(33, 430);
+            this.NormalDown.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.NormalDown.Name = "NormalDown";
-            this.NormalDown.Size = new System.Drawing.Size(75, 46);
+            this.NormalDown.Size = new System.Drawing.Size(205, 125);
             this.NormalDown.TabIndex = 1;
             this.NormalDown.Text = "Down";
             this.NormalDown.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@
             // 
             // NeutralButton
             // 
-            this.NeutralButton.Location = new System.Drawing.Point(12, 12);
+            this.NeutralButton.Location = new System.Drawing.Point(33, 34);
+            this.NeutralButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.NeutralButton.Name = "NeutralButton";
-            this.NeutralButton.Size = new System.Drawing.Size(166, 57);
+            this.NeutralButton.Size = new System.Drawing.Size(455, 156);
             this.NeutralButton.TabIndex = 2;
             this.NeutralButton.Text = "Write Neutral";
             this.NeutralButton.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // 
             // DownPhased
             // 
-            this.DownPhased.Location = new System.Drawing.Point(103, 156);
+            this.DownPhased.Location = new System.Drawing.Point(282, 430);
+            this.DownPhased.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.DownPhased.Name = "DownPhased";
-            this.DownPhased.Size = new System.Drawing.Size(75, 46);
+            this.DownPhased.Size = new System.Drawing.Size(205, 125);
             this.DownPhased.TabIndex = 4;
             this.DownPhased.Text = "Down";
             this.DownPhased.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // 
             // UpPhased
             // 
-            this.UpPhased.Location = new System.Drawing.Point(103, 75);
+            this.UpPhased.Location = new System.Drawing.Point(282, 206);
+            this.UpPhased.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.UpPhased.Name = "UpPhased";
-            this.UpPhased.Size = new System.Drawing.Size(75, 47);
+            this.UpPhased.Size = new System.Drawing.Size(205, 129);
             this.UpPhased.TabIndex = 3;
             this.UpPhased.Text = "Up";
             this.UpPhased.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@
             // 
             // EepromSave
             // 
-            this.EepromSave.Location = new System.Drawing.Point(12, 208);
+            this.EepromSave.Location = new System.Drawing.Point(33, 572);
+            this.EepromSave.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.EepromSave.Name = "EepromSave";
-            this.EepromSave.Size = new System.Drawing.Size(166, 65);
+            this.EepromSave.Size = new System.Drawing.Size(455, 179);
             this.EepromSave.TabIndex = 5;
             this.EepromSave.Text = "Save to EEPROM";
             this.EepromSave.UseVisualStyleBackColor = true;
@@ -112,24 +118,27 @@
             // normalBox
             // 
             this.normalBox.Enabled = false;
-            this.normalBox.Location = new System.Drawing.Point(13, 128);
+            this.normalBox.Location = new System.Drawing.Point(37, 352);
+            this.normalBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.normalBox.Name = "normalBox";
-            this.normalBox.Size = new System.Drawing.Size(74, 22);
+            this.normalBox.Size = new System.Drawing.Size(195, 50);
             this.normalBox.TabIndex = 6;
             // 
             // phasedBox
             // 
             this.phasedBox.Enabled = false;
-            this.phasedBox.Location = new System.Drawing.Point(103, 128);
+            this.phasedBox.Location = new System.Drawing.Point(282, 352);
+            this.phasedBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.phasedBox.Name = "phasedBox";
-            this.phasedBox.Size = new System.Drawing.Size(74, 22);
+            this.phasedBox.Size = new System.Drawing.Size(195, 50);
             this.phasedBox.TabIndex = 7;
             // 
             // RebootButton
             // 
-            this.RebootButton.Location = new System.Drawing.Point(11, 279);
+            this.RebootButton.Location = new System.Drawing.Point(29, 768);
+            this.RebootButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.RebootButton.Name = "RebootButton";
-            this.RebootButton.Size = new System.Drawing.Size(166, 65);
+            this.RebootButton.Size = new System.Drawing.Size(455, 179);
             this.RebootButton.TabIndex = 8;
             this.RebootButton.Text = "REBOOT";
             this.RebootButton.UseVisualStyleBackColor = true;
@@ -137,9 +146,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 383);
+            this.button1.Location = new System.Drawing.Point(33, 1053);
+            this.button1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 65);
+            this.button1.Size = new System.Drawing.Size(455, 179);
             this.button1.TabIndex = 9;
             this.button1.Text = "Main Firmware";
             this.button1.UseVisualStyleBackColor = true;
@@ -147,9 +157,9 @@
             // 
             // EdgeCutterCalibrator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 44F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(189, 460);
+            this.ClientSize = new System.Drawing.Size(521, 1266);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RebootButton);
             this.Controls.Add(this.phasedBox);
@@ -160,7 +170,9 @@
             this.Controls.Add(this.NeutralButton);
             this.Controls.Add(this.NormalDown);
             this.Controls.Add(this.UpNormal);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "EdgeCutterCalibrator";
             this.Text = "TiNRS EdgeCutter Calibrator";
             this.Load += new System.EventHandler(this.EdgeCutterCalibrator_Load);

@@ -136,6 +136,8 @@ namespace HexToWaveLib
             }
 
             WriteReboot(Data2);
+            WriteReboot(Data2);
+            WriteReboot(Data2);
 
             WaveGenerator W2 = new WaveGenerator(Data2);
             W2.Save(targetwavfile);
