@@ -21,6 +21,25 @@ namespace WobblerCalibrator
             normalBox.Text = levelNormal.ToString();
             phasedBox.Text = levelPhased.ToString();
 
+
+            Explanation.Text = @"
+
+1) boot Wobbler in bootloader mode (press the trigger button while starting for about 5 seconds - it will not start like it usually does)
+2) put all the knobs in center position
+3) connect a patchcable from your headphone out to the mod input on wobbler
+4) put your headphone volume to maximum
+5) press the Write Neutral button
+6) connect a multimeter to normal output
+7) use the left up/down buttons to find the value that is closest to 0 volt
+8) connect a multimeter to phased output
+9) use the right up/down buttons to find the value that is closest to 0 volt
+10) press the Save to EEPROM button
+11) wait until it is done
+12) just to make sure, press the Save to EEPROM button again
+13) wait until it is done
+14) press the REBOOT button
+15) done!
+";
         }
         int R = 0;
         int G = 0;
