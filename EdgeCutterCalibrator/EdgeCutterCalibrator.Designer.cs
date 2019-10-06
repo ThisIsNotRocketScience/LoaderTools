@@ -40,6 +40,7 @@
             this.normalBox = new System.Windows.Forms.TextBox();
             this.phasedBox = new System.Windows.Forms.TextBox();
             this.RebootButton = new System.Windows.Forms.Button();
+            this.Explanation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // UpNormal
@@ -120,7 +121,7 @@
             this.normalBox.Location = new System.Drawing.Point(37, 352);
             this.normalBox.Margin = new System.Windows.Forms.Padding(7);
             this.normalBox.Name = "normalBox";
-            this.normalBox.Size = new System.Drawing.Size(195, 50);
+            this.normalBox.Size = new System.Drawing.Size(195, 61);
             this.normalBox.TabIndex = 6;
             // 
             // phasedBox
@@ -129,7 +130,7 @@
             this.phasedBox.Location = new System.Drawing.Point(282, 352);
             this.phasedBox.Margin = new System.Windows.Forms.Padding(7);
             this.phasedBox.Name = "phasedBox";
-            this.phasedBox.Size = new System.Drawing.Size(195, 50);
+            this.phasedBox.Size = new System.Drawing.Size(195, 61);
             this.phasedBox.TabIndex = 7;
             // 
             // RebootButton
@@ -143,11 +144,21 @@
             this.RebootButton.UseVisualStyleBackColor = true;
             this.RebootButton.Click += new System.EventHandler(this.RebootButton_Click);
             // 
+            // Explanation
+            // 
+            this.Explanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Explanation.Location = new System.Drawing.Point(555, 54);
+            this.Explanation.Multiline = true;
+            this.Explanation.Name = "Explanation";
+            this.Explanation.Size = new System.Drawing.Size(656, 685);
+            this.Explanation.TabIndex = 10;
+            // 
             // EdgeCutterCalibrator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 44F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(27F, 54F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 790);
+            this.ClientSize = new System.Drawing.Size(1285, 790);
+            this.Controls.Add(this.Explanation);
             this.Controls.Add(this.RebootButton);
             this.Controls.Add(this.phasedBox);
             this.Controls.Add(this.normalBox);
@@ -163,7 +174,7 @@
             this.Name = "EdgeCutterCalibrator";
             this.Text = "Edgecutter Calibrator";
             this.Load += new System.EventHandler(this.EdgeCutterCalibrator_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WobblerCalibrator_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EdgecutterCalibrator_Keydown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,6 +193,7 @@
         private System.Windows.Forms.TextBox phasedBox;
         private System.Windows.Forms.Button EepromSave;
         private System.Windows.Forms.Button RebootButton;
+        private System.Windows.Forms.TextBox Explanation;
     }
 }
 
